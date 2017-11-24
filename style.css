@@ -32,7 +32,7 @@ header input {
 	border-bottom-left-radius: 5px;
 	border-top-right-radius:25px;
 	border-bottom-right-radius: 25px;
-	border:0px;
+	border: 0px;
 	box-shadow: none;
 	outline: none;
 
@@ -46,6 +46,10 @@ header input {
 
 header input::-webkit-input-placeholder {
 	color: rgba(255,255,255,0.75);
+}
+
+input:focus::-webkit-input-placeholder {
+	color: transparent;
 }
 
 header button {
@@ -82,15 +86,13 @@ ul.todo li {
 	font-size: 18px;
 	color:#444;
 	line-height: 22px;
-
-
 	background: #fff;
 	border-radius: 5px;
 	position: relative;
 	box-shadow: 0px 1px 2px rgba(44,62,80,0.10);
 	list-style-type: none;
 	margin: 0 0 10px 0;
-	padding: 15px 100% 0 0;
+	padding: 15px 100% 0 15px;
 }
 
 ul.todo li:last-of-type {
@@ -98,7 +100,7 @@ ul.todo li:last-of-type {
 }
 
 ul.todo li .buttons {
-	width: 19%;
+	width: 20%;
 	height: 50%;
 	position: absolute;
 	top: 0;
@@ -108,12 +110,14 @@ ul.todo li .buttons {
 
 ul.todo li .buttons button {
 	width: 50px;
+	padding: 10px;
 	height: 50px;
 	float: left;
 	background: none;
 	border: 1px solid black;
 	box-shadow: none;
 	outline: none;
+	display: inline;
 	position: relative;
 
 	-webkit-appearance:none;
